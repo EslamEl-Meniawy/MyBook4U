@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-13 16:40:33
+* @Last Modified time: 2015-10-15 11:27:24
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -46,6 +46,12 @@ html, body, .mdl-layout__content, .page-content {
 .nom {
 	margin: 0;
 }
+.p8 {
+	padding: 8px;
+}
+.m8 {
+	margin: 8px;
+}
 .drawer-title {
 	color: transparent;
 }
@@ -80,20 +86,73 @@ html, body, .mdl-layout__content, .page-content {
 	padding: 0px;
 	min-width: min-content;
 }
+.header-img {
+	width: auto;
+	display: block;
+	margin: auto;
+	max-width: 150px;
+}
+.header-search-button {
+	margin: 4px;
+	position: absolute;
+	color: rgb(255,255,255);
+	background-color: inherit;
+	display: block;
+	height: 48px;
+	width: 48px;
+	border: 0;
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	font-size: 26px;
+	line-height: 50px;
+	font-family: Helvetica,Arial,sans-serif;
+	top: 0;
+	right: 0;
+	color: rgb(255,255,255);
+	z-index: 4;
+}
+.mdl-layout__drawer {
+	border-right: 1px solid #545454;
+}
+hr {
+	border-color: #2e2e2e;
+}
+.loading {
+	position: absolute;
+	top: 0;
+	z-index: 99999;
+	width: 100%;
+	text-align: center;
+	margin-top: 8px;
+	display: none;
+}
 /* mobile */
 @media screen and (max-width: 599px) {
+	.header-img {
+		height: 56px;
+	}
 	.mdl-layout__drawer-button img {
 		margin-bottom: 8px;
 	}
 }
 /* tab */
 @media screen and (min-width: 600px) {
+	.header-img {
+		height: 56px;
+	}
 	.mdl-layout__drawer-button img {
 		margin-bottom: 8px;
 	}
 }
 /* desktop */
 @media screen and (min-width: 768px) {
+	.header-img {
+		height: 64px;
+	}
 	.mdl-layout__drawer-button img {
 		margin-bottom: 10px;
 	}

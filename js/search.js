@@ -1,8 +1,8 @@
 /* 
 * @Author: Eslam El-Meniawy
-* @Date: 2015-10-13 16:44:14
+* @Date: 2015-10-15 13:32:46
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-15 10:17:22
+* @Last Modified time: 2015-10-15 13:34:18
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -20,7 +20,7 @@ function onBackKeyDown() {
 	if ($('.mdl-layout__drawer').hasClass('is-visible')) {
 		$('.mdl-layout__drawer').removeClass('is-visible');
 	} else {
-		navigator.app.exitApp();
+		window.location = "index.html";
 	}
 }
 function checkConnection() {

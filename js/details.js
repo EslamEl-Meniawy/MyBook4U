@@ -1,8 +1,8 @@
 /* 
 * @Author: Eslam El-Meniawy
-* @Date: 2015-10-13 16:44:14
+* @Date: 2015-10-15 13:53:58
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-15 10:17:22
+* @Last Modified time: 2015-10-15 13:55:05
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -10,6 +10,7 @@
 * So, good luck maintaining the code :D
 */
 
+var id = GetDataValue('id');
 var connected;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
@@ -20,7 +21,7 @@ function onBackKeyDown() {
 	if ($('.mdl-layout__drawer').hasClass('is-visible')) {
 		$('.mdl-layout__drawer').removeClass('is-visible');
 	} else {
-		navigator.app.exitApp();
+		window.history.back();
 	}
 }
 function checkConnection() {
@@ -29,5 +30,15 @@ function checkConnection() {
 		connected = 0;
 	} else {
 		connected = 1;
+	}
+}
+function GetDataValue(VarSearch) {
+	var SearchString = window.location.search.substring(1);
+	var VariableArray = SearchString.split('&');
+	for (var i = 0; i < VariableArray.length; i++) {
+		var KeyValuePair = VariableArray[i].split('=');
+		if (KeyValuePair[0] == VarSearch) {
+			return KeyValuePair[1];
+		}
 	}
 }
