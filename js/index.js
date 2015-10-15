@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:44:14
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-15 14:53:26
+* @Last Modified time: 2015-10-15 16:14:19
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -15,7 +15,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 	$('.mdl-layout__drawer-button').html('<img class="material-icons" src="img/menu.png">');
 	document.addEventListener("backbutton", onBackKeyDown, false);
-	// Swiper slide width swiper-img
 	// Swiper
 	new Swiper('.swiper-container-main', {
 		pagination: '.swiper-pagination',
@@ -24,6 +23,10 @@ function onDeviceReady() {
 		slidesPerGroup: 3,
 		paginationClickable: true,
 		loop: true
+	});
+	// Tab book
+	$('.tab-book').each(function() {
+		$(this).width((($(window).width() - 32) / 3) + 'px');
 	});
 }
 function onBackKeyDown() {

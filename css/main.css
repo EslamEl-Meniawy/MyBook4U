@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-15 14:51:15
+* @Last Modified time: 2015-10-15 16:16:23
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -52,6 +52,9 @@ html, body, .mdl-layout__content, .page-content {
 .m8 {
 	margin: 8px;
 }
+.fr {
+	float: right;
+}
 .drawer-title {
 	color: transparent;
 }
@@ -81,7 +84,7 @@ html, body, .mdl-layout__content, .page-content {
 	display: inline-block;
 	border: none;
 	font-size: inherit;
-	color: #FF5252;
+	color: #d32f2f;
 	margin: 0px 24px 0px 0px;
 	padding: 0px;
 	min-width: min-content;
@@ -153,6 +156,36 @@ hr {
 .swiper-img {
 	width: 100%;
 	height: 160px;
+}
+.tab-bar-round {
+	border: 1px solid #d32f2f;
+	border-radius: 20px;
+	margin: 20px 10px 8px;
+}
+.round-tab {
+	border-radius: 20px;
+	width: 50%;
+	color: #d32f2f;
+}
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
+	background-color: transparent;
+}
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+	color: #fff;
+	background: #d32f2f;
+}
+.tab-panel {
+	padding-left: 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab-book {
+	margin-right: 8px;
+}
+.tab-book img {
+	width: 100%;
+	height: 140px;
 }
 /* mobile */
 @media screen and (max-width: 599px) {
