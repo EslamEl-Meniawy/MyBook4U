@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 16:10:57
+* @Last Modified time: 2015-10-18 16:19:17
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -176,13 +176,14 @@ hr {
 	height: 160px;
 }
 .tab-bar-round {
+	width: 320px;
 	border: 1px solid #d32f2f;
 	border-radius: 20px;
-	margin: 20px 10px 8px;
+	margin: 20px auto 8px;
 }
 .round-tab {
 	border-radius: 20px;
-	/*width: 50%;*/
+	width: 160px;
 	color: #d32f2f;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
