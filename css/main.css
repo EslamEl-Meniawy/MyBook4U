@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 15:19:14
+* @Last Modified time: 2015-10-18 16:10:57
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -182,7 +182,7 @@ hr {
 }
 .round-tab {
 	border-radius: 20px;
-	width: 50%;
+	/*width: 50%;*/
 	color: #d32f2f;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {

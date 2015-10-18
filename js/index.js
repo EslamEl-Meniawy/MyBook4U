@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:44:14
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 14:00:20
+* @Last Modified time: 2015-10-18 16:10:30
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -15,6 +15,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 	$('.mdl-layout__drawer-button').html('<img class="material-icons" src="img/menu.png">');
 	document.addEventListener("backbutton", onBackKeyDown, false);
+	// Tab size
+	$('.round-tab').each(function() {
+		$(this).width(($('.tab-bar-round').width() / 2) + 'px');
+	});
 	// Swiper
 	new Swiper('.swiper-container-main', {
 		pagination: '.swiper-pagination',
