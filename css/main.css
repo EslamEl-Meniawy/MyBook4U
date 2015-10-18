@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 13:40:08
+* @Last Modified time: 2015-10-18 14:43:35
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -179,7 +179,7 @@ hr {
 }
 .round-tab {
 	border-radius: 20px;
-	/*width: 48%;*/
+	width: 50%;
 	color: #d32f2f;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
@@ -212,7 +212,7 @@ hr {
 	bottom: 24px;
 	z-index: 99999;
 }
-.search-div, .mdl-shadow--2dp, .search-result-div {
+.search-div, .mdl-shadow--2dp, .search-result-div, .details-block {
 	width: 100%;
 	padding: 8px;
 	-webkit-box-sizing: border-box;
@@ -229,15 +229,36 @@ hr {
 	margin: 10px 0;
 }
 .search-result-data-div {
-	margin-right: 16px;
-}
-.search-result-data-div {
 	height: 140px;
 	overflow: hidden;
+	margin-right: 16px;
 }
 .download-count {
 	margin: 10px 0;
 	opacity: 0.8;
+}
+.details-div {
+	width: 100%;
+	padding: 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 176px;
+	margin: 10px 0;
+}
+.details-data-div {
+	height: 160px;
+}
+.download-button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.details-book-details {
+	margin: 20px 0;
+}
+.add-comment-button {
+	width: 100px;
 }
 /* mobile */
 @media screen and (max-width: 599px) {

@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:44:14
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 13:41:07
+* @Last Modified time: 2015-10-18 14:00:20
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -23,10 +23,6 @@ function onDeviceReady() {
 		slidesPerGroup: 3,
 		paginationClickable: true,
 		loop: true
-	});
-	//Round tab
-	$('.round-tab').each(function() {
-		$(this).width((($(window).width() - 20) / 2) + 'px');
 	});
 	// Tab book
 	$('.tab-book').each(function() {
