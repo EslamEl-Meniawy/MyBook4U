@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 12:16:11
+* @Last Modified time: 2015-10-18 13:11:58
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -175,11 +175,11 @@ hr {
 .tab-bar-round {
 	border: 1px solid #d32f2f;
 	border-radius: 20px;
-	margin: 20px 10px 8px;
+	margin: 20px 2% 8px;
 }
 .round-tab {
 	border-radius: 20px;
-	width: 50%;
+	width: 48%;
 	color: #d32f2f;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
@@ -220,10 +220,9 @@ hr {
 	box-sizing: border-box;
 }
 .search-button {
-	width: auto;
+	width: 70px;
 	display: block;
 	margin: auto;
-	max-width: 70px;
 }
 .search-result-div {
 	height: 156px;
