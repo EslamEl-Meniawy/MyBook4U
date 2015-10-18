@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 16:19:17
+* @Last Modified time: 2015-10-18 16:30:11
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -175,6 +175,9 @@ hr {
 	width: 100%;
 	height: 160px;
 }
+.mdl-tabs__tab .mdl-tabs__ripple-container {
+	width: 160px;
+}
 .tab-bar-round {
 	width: 320px;
 	border: 1px solid #d32f2f;
@@ -188,6 +191,7 @@ hr {
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
 	background-color: transparent;
+	width: 160px;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
 	color: #fff;
