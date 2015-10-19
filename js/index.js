@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:44:14
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-19 11:53:33
+* @Last Modified time: 2015-10-19 11:58:36
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -26,7 +26,7 @@ function onDeviceReady() {
 		var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8));
 		if (androidversion < 4.4) {
 			$('.round-tab').each(function() {
-				$(this).width(110);
+				$(this).width(111);
 			});
 		}
 	}
