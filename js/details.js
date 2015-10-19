@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-15 13:53:58
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-18 14:21:58
+* @Last Modified time: 2015-10-19 16:14:57
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -10,19 +10,39 @@
 * So, good luck maintaining the code :D
 */
 
-var id = GetDataValue('id');
 var connected;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 	$('.mdl-layout__drawer-button').html('<img class="material-icons" src="img/menu.png">');
 	document.addEventListener("backbutton", onBackKeyDown, false);
-	// Grid
 	$('.grid-30').each(function() {
 		$(this).width((($(window).width() - 48) * 0.3) + 'px');
 	});
 	$('.grid-70').each(function() {
 		$(this).width((($(window).width() - 48) * 0.7) + 'px');
 	});
+	checkConnection();
+	if (connected == 1) {
+		$('#loading').show();
+		$.ajax({
+			type : 'GET',
+			url : 'http://192.168.1.2/books/index.php?option=com_mobile&view=book&id=' + GetDataValue('id'),
+			dataType : 'JSON'
+		}).done(function(response) {
+			$('#details-img').attr('src', 'http://192.168.1.2/books/' + response.image);
+			$('#details-title').html(response.book_title);
+			$('#details-download-count').html('مرات التحميل: ' + response.downloads);
+			$('#details-author').attr('href', 'author.html?id=' + response.auther_id);
+			$('#details-author').html(response.auther_name);
+			$('#book-details').html(response.description);
+			$('#loading').hide();
+		}).fail(function() {
+			$('#loading').hide();
+			createSnackbar("حدث خطأ اثناء تحميل بيانات الكتاب", 'إغلاق');
+		});
+	} else {
+		createSnackbar("لا يوجد اتصال بالانترنت", 'إغلاق');
+	}
 }
 function onBackKeyDown() {
 	if ($('.mdl-layout__drawer').hasClass('is-visible')) {
