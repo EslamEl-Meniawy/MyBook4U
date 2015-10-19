@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:33:24
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-19 11:38:16
+* @Last Modified time: 2015-10-19 14:34:19
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -141,6 +141,9 @@ html, body, .mdl-layout__content, .page-content {
 }
 hr {
 	border-color: #2e2e2e;
+}
+.drawer-button, .drawer-menu {
+	width: 238px;
 }
 .loading {
 	position: absolute;
