@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-15 13:37:33
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-19 12:59:55
+* @Last Modified time: 2015-10-20 11:44:26
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -64,7 +64,7 @@ function GetDataValue(VarSearch) {
 function loadData() {
 	$.ajax({
 		type : 'GET',
-		url : 'http://192.168.1.2/books/index.php?option=com_mobile&view=catogery&catid=' + id + '&page=' + page,
+		url : 'http://192.168.1.2/books/index.php?option=com_mobile&view=catogery_books&catid=' + id + '&page=' + page,
 		dataType : 'JSON'
 	}).done(function(response) {
 		if (page == 0) {

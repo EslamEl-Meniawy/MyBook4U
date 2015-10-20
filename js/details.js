@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-15 13:53:58
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-19 16:14:57
+* @Last Modified time: 2015-10-20 12:08:10
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -34,7 +34,21 @@ function onDeviceReady() {
 			$('#details-download-count').html('مرات التحميل: ' + response.downloads);
 			$('#details-author').attr('href', 'author.html?id=' + response.auther_id);
 			$('#details-author').html(response.auther_name);
+			$('#download').show();
+			$('#download').click(function() {
+				cordova.InAppBrowser.open('https://docs.google.com/uc?id=' + response.url + '&export=download', '_system');
+			});
 			$('#book-details').html(response.description);
+			$('#add-comment').show();
+			$('#add-comment').click(function() {
+				$('#loading').show();
+				$('#add-comment').hide();
+				$('#frame').show();
+				$("#frame").attr('src', 'http://11.11.11.9/comments/mybook4u.html?url=' + response.id);
+				$('#frame').load(function(){
+					$('#loading').hide();
+				});
+			});
 			$('#loading').hide();
 		}).fail(function() {
 			$('#loading').hide();
