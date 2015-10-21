@@ -2,7 +2,7 @@
 * @Author: Eslam El-Meniawy
 * @Date: 2015-10-13 16:44:14
 * @Last Modified by: eslam
-* @Last Modified time: 2015-10-21 10:55:59
+* @Last Modified time: 2015-10-21 11:27:33
 *
 * Dear maintainer:
 * When I wrote this, only God and I understood what I was doing
@@ -214,7 +214,7 @@ function getDrawer() {
 function fillDrawer(response) {
 	for (var i = 1; i < response.length; i++) {
 		if (typeof response[i].subcat === 'undefined' || response[i].subcat === null) {
-			$('#drawer').append('<a class="mdl-navigation__link" href="category.html?id=' + response[i].id + '"><div class="tac"><span class="mdl-color-text--white"><b>' + response[i].title + '</b></span></div></a><hr>');
+			$('#drawer').append('<a class="mdl-navigation__link" href="category.html?id=' + response[i].link + '"><div class="tac"><span class="mdl-color-text--white"><b>' + response[i].title + '</b></span></div></a><hr>');
 		} else {
 			var button = document.createElement('button');
 			var div = document.createElement('div');
@@ -246,7 +246,7 @@ function fillDrawer(response) {
 				li.appendChild(a);
 				li_span.className = 'mdl-color-text--red-700';
 				li_div.className = 'tac';
-				a.setAttribute("href", "category.html?id=" + response[i].subcat[j].id);
+				a.setAttribute("href", "category.html?id=" + response[i].subcat[j].link);
 				a.className = 'tdn';
 				li.className = 'mdl-menu__item';
 				ul.appendChild(li);
